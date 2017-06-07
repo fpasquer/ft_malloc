@@ -17,7 +17,7 @@ endif
 NAME			= libft_malloc_$(HOSTTYPE).so
 
 SRC_NAME		= find_block.c free.c malloc.c show_alloc_mem.c add_in_env.c	\
-				  valloc.c calloc.c realloc.c block.c env.c main.c
+				  valloc.c calloc.c realloc.c block.c env.c #main.c
 
 INCLUDES		= ft_malloc.h env.h
 
@@ -25,7 +25,7 @@ LIBRARY			= libft/libft.a
 
 OTHERS			= libft Makefile auteur
 
-OTHER_FLAGS 	= #-shared
+OTHER_FLAGS 	= -shared
 
 GCC				= gcc
 CFLAGS			= -Wall -Wextra -Werror -g

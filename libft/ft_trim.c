@@ -6,7 +6,7 @@
 /*   By: fpasquer <fpasquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/24 14:42:30 by fpasquer          #+#    #+#             */
-/*   Updated: 2017/05/24 14:42:45 by fpasquer         ###   ########.fr       */
+/*   Updated: 2017/06/07 15:10:35 by fpasquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ char						*ft_trim(char *str)
 			break ;
 	return ((end > 0) ? ft_strndup(&str[start], end) : ft_strdup(""));
 }
-

@@ -6,7 +6,7 @@
 /*   By: fpasquer <fpasquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/06 08:38:22 by fpasquer          #+#    #+#             */
-/*   Updated: 2017/06/06 22:14:20 by fpasquer         ###   ########.fr       */
+/*   Updated: 2017/06/07 15:22:34 by fpasquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ static t_block				*save_not_free(t_block *block, size_t size)
 **		header fait 40 octets (block - SIZE_HEAD - size demande = 124 - 40 - 45
 **		= 39) Size demande passe donc de 45 a 84 pour combler ce trou
 */
+
 t_block						*find_best_block(size_t size, t_malloc_env *env,
 		size_t size_env, int where)
 {
@@ -70,7 +71,7 @@ t_block						*find_best_block(size_t size, t_malloc_env *env,
 	if ((curs = env) == NULL)
 		return (save_not_free(add_new_malloc_env(size_env, where), size +
 				SIZE_HEAD));
-	m = NULL;
+		m = NULL;
 	while (curs != NULL)
 	{
 		start = curs->block;
@@ -92,7 +93,6 @@ t_block						*find_best_block(size_t size, t_malloc_env *env,
 /*
 **	END : find_best_block
 */
-
 
 void						*malloc(size_t size)
 {

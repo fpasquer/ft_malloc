@@ -6,14 +6,14 @@
 /*   By: fpasquer <fpasquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/06 17:23:56 by fpasquer          #+#    #+#             */
-/*   Updated: 2017/06/06 22:14:55 by fpasquer         ###   ########.fr       */
+/*   Updated: 2017/06/07 15:20:45 by fpasquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/env.h"
 #include "../incs/ft_malloc.h"
 
-static void *				new_addr(t_block **block, size_t size, void *ptr)
+static void					*new_addr(t_block **block, size_t size, void *ptr)
 {
 	size_t					i;
 	char					*tmp;
@@ -41,18 +41,18 @@ void						*realloc(void *ptr, size_t size)
 
 	if (ptr == NULL || (block = find_block(ptr, &env)) == NULL)
 		return (malloc(size));
-	if (size + SIZE_HEAD < block->size)//si on reduit le block
+	if (size + SIZE_HEAD < block->size)
 	{
 		if (split_block(block, size + SIZE_HEAD) == true)
 			set_block_avalable(&block->next);
 	}
-	else if (size + SIZE_HEAD > block->size)// si on augmente le block
+	else if (size + SIZE_HEAD > block->size)
 	{
 		if (block->next != NULL && block->next->free == true && size +
 				SIZE_HEAD <= block->size + block->next->size)
 		{
 			if (join_block(block, block->next) == true)
-				if (split_block(block,size + SIZE_HEAD) == true)
+				if (split_block(block, size + SIZE_HEAD) == true)
 					set_block_avalable(&block->next);
 		}
 		else

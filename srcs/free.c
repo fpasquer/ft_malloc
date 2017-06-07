@@ -6,7 +6,7 @@
 /*   By: fpasquer <fpasquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/06 15:09:44 by fpasquer          #+#    #+#             */
-/*   Updated: 2017/06/06 22:29:05 by fpasquer         ###   ########.fr       */
+/*   Updated: 2017/06/07 15:20:20 by fpasquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ static bool					check_env_block(t_malloc_env **env)
 **	RETOUR :
 **		true si success ou false
 */
+
 bool						set_block_avalable(t_block **block)
 {
 	if (block == NULL || *block == NULL || (*block)->free != false)

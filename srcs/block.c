@@ -6,7 +6,7 @@
 /*   By: fpasquer <fpasquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/06 09:18:46 by fpasquer          #+#    #+#             */
-/*   Updated: 2017/06/06 15:15:22 by fpasquer         ###   ########.fr       */
+/*   Updated: 2017/06/07 15:13:25 by fpasquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 **	RETURN :
 **		true si la decoupe est ok sinon false
 */
+
 bool						split_block(t_block *block_at_split, size_t size)
 {
 	void					*ptr;
@@ -36,7 +37,7 @@ bool						split_block(t_block *block_at_split, size_t size)
 		return (false);
 	mem = block_at_split->size;
 	free = block_at_split->free;
-	tmp = (void*)block_at_split->data + size -SIZE_HEAD;
+	tmp = (void*)block_at_split->data + size - SIZE_HEAD;
 	next = block_at_split->next;
 	if ((ptr = update_bloc_info(block_at_split, size - SIZE_HEAD,
 			block_at_split->free)) == update_bloc_ptr(block_at_split, tmp,
@@ -60,6 +61,7 @@ bool						split_block(t_block *block_at_split, size_t size)
 **	RETOUR :
 **		true si left et right sont different de NULL sinon false
 */
+
 bool						join_block(t_block *left, t_block *right)
 {
 	if (left == NULL || right == NULL)

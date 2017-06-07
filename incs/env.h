@@ -6,24 +6,24 @@
 /*   By: fpasquer <fpasquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/06 09:10:35 by fpasquer          #+#    #+#             */
-/*   Updated: 2017/06/06 21:48:45 by fpasquer         ###   ########.fr       */
+/*   Updated: 2017/06/07 15:23:48 by fpasquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ENV_H
-#define ENV_H
+# define ENV_H
 
-#include <sys/mman.h>
-#include <stdbool.h>
+# include <sys/mman.h>
+# include <stdbool.h>
 
-#define TINY 512
-#define SMALL 4096
-#define LARG 0
-#define NB_MAX_CONTENT 2
+# define TINY 512
+# define SMALL 4096
+# define LARG 0
+# define NB_MAX_CONTENT 2
 
-#define PROT_MMAP (PROT_READ | PROT_WRITE)
-#define FLAG_MMAP (MAP_ANONYMOUS | MAP_PRIVATE)
-#define MOD_P_SIZE(s) s + s % getpagesize()
+# define PROT_MMAP (PROT_READ | PROT_WRITE)
+# define FLAG_MMAP (MAP_ANONYMOUS | MAP_PRIVATE)
+# define MOD_P_SIZE(s) s + s % getpagesize()
 
 /*
 **	s_block :
@@ -57,7 +57,7 @@ typedef struct				s_env
 	t_malloc_env			*larg;
 }							t_env;
 
-#define SIZE_HEAD sizeof(t_block)
+# define SIZE_HEAD sizeof(t_block)
 
 t_env						g_env;
 
@@ -73,6 +73,5 @@ t_block						*find_block(void *ptr, t_malloc_env **env);
 bool						set_block_avalable(t_block **block);
 t_block						*find_best_block(size_t size, t_malloc_env *env,
 		size_t size_env, int where);
-
 
 #endif

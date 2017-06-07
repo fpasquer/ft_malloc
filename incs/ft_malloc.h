@@ -6,17 +6,17 @@
 /*   By: fpasquer <fpasquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/04 14:44:58 by fpasquer          #+#    #+#             */
-/*   Updated: 2017/06/06 22:13:26 by fpasquer         ###   ########.fr       */
+/*   Updated: 2017/06/07 15:24:21 by fpasquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MALLOC
-# define FT_MALLOC
+#ifndef FT_MALLOC_H
+# define FT_MALLOC_H
 
-#include <stdbool.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include "../libft/libft.h"
+# include <stdbool.h>
+# include <stdlib.h>
+# include <stdio.h>
+# include "../libft/libft.h"
 
 void						*malloc(size_t size);
 void						free(void *ptr);

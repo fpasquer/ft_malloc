@@ -6,7 +6,7 @@
 /*   By: fpasquer <fpasquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/24 10:09:02 by fpasquer          #+#    #+#             */
-/*   Updated: 2017/05/24 10:09:30 by fpasquer         ###   ########.fr       */
+/*   Updated: 2017/06/07 15:11:04 by fpasquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,11 @@ int							ft_scandir(char *path, char ***list)
 	while ((str_dirent = readdir(direct)) != NULL)
 	{
 		if ((tmp = ft_strdup(str_dirent->d_name)) == NULL)
-				break ;
+			break ;
 		ret++;
-			*list = ft_add_to_array(tmp, *list);
+		*list = ft_add_to_array(tmp, *list);
 	}
 	if (direct != NULL)
 		closedir(direct);
 	return (ret);
 }
-

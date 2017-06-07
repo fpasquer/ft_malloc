@@ -6,7 +6,7 @@
 /*   By: fpasquer <fpasquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/06 15:14:43 by fpasquer          #+#    #+#             */
-/*   Updated: 2017/06/06 16:49:05 by fpasquer         ###   ########.fr       */
+/*   Updated: 2017/06/07 15:12:47 by fpasquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,3 @@ t_block						*find_block(void *ptr, t_malloc_env **env)
 	(*env) = NULL;
 	return (NULL);
 }
-

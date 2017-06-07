@@ -6,14 +6,14 @@
 /*   By: fpasquer <fpasquer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/24 07:56:11 by fpasquer          #+#    #+#             */
-/*   Updated: 2017/05/24 08:35:21 by fpasquer         ###   ########.fr       */
+/*   Updated: 2017/06/07 15:11:29 by fpasquer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-**	DESCRIPTION : 
+**	DESCRIPTION :
 **		int ft_is_dir(char *path)
 **		indique si le path pointe vers un dossier
 **	PARAMETRE :
